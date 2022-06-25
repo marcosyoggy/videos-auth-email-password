@@ -67,29 +67,48 @@
   >>> Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs;
   */
 
-  const get_Collection = async () => {
-    try {
-      const jacaSnapshot = await getDocs(coll_Ref, 'firestore-review')
+  // const get_Collection = async () => {
+  //   try {
+  //     const jacaSnapshot = await getDocs(coll_Ref, 'firestore-review')
       
-      console.log('Imagem do `collection`:', jacaSnapshot)
-      jacaSnapshot.docs.filter((doc, index) => {
-        const {new_Field_Add_01, first_field, second_field} = doc.data()
-        // console.log('Proerty `doc.data()`:', doc.data())
-        console.log(`Nome do ${index + 1}° Field: ${Object.keys(doc.data())}`)
-        console.log(`Pares do ${index + 1}° object: ${Object.entries(doc.data())}`)
+  //     console.log('Imagem do `collection`:', jacaSnapshot)
+  //     jacaSnapshot.docs.filter((doc, index) => {
+  //       const {new_Field_Add_01, first_field, second_field} = doc.data()
+  //       // console.log('Proerty `doc.data()`:', doc.data())
+  //       console.log(`Nome do ${index + 1}° Field: ${Object.keys(doc.data())}`)
+  //       console.log(`Pares do ${index + 1}° object: ${Object.entries(doc.data())}`)
 
-        // console.log(`Nome do 1° field: ${first_field}`)
-        // console.log(`Nome do 2° field: ${second_field}`)
-        // console.log(`Nome do 'NEW' field: ${new_Field_Add_01}`)
-      })
+  //       // console.log(`Nome do 1° field: ${first_field}`)
+  //       // console.log(`Nome do 2° field: ${second_field}`)
+  //       // console.log(`Nome do 'NEW' field: ${new_Field_Add_01}`)
+  //     })
 
 
 
-    } catch (e) {
-      console.log(e.message)
-    }
+  //   } catch (e) {
+  //     console.log(e.message)
+  //   }
+  // }
+
+  // get_Collection()
+
+
+  // XXXXXXXXXXXXXXXXXXX POP_UP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+  const input_Login = document.querySelector('[data-js="div-login"]')
+  const div_Form = document.querySelector('[data-js="div-form"]')
+  const button_Log_Out = document.querySelector('[data-js="log-out"]')
+
+  const open_Login = e => {
+    input_Login.style.display = 'none'
+    div_Form.style.display = 'inline-block'
   }
 
-  get_Collection()
+  const close_Login = e => {
+    e.preventDefault()
+    input_Login.style.display = 'flex'
+    div_Form.style.display = 'none'
+  }
 
- 
+  input_Login.addEventListener('click', open_Login)
+  button_Log_Out.addEventListener('click', close_Login)

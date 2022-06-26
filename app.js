@@ -1,7 +1,8 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
   
   import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js";
-
+  
+  import { getAuth } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
 
 
 
@@ -91,6 +92,20 @@
   // }
 
   // get_Collection()
+
+  // XXXXXXXXXXXXXXX GET_AUTH_SERVICE_FIRESTORE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  /*
+  >>> Analogamnete à :`import { getFirestore...}.../firebase-firestore.js";`, que dá acesso ao banco de dados e seus métodos;
+
+  >>> 'getAuth' : `import { getAuth... }...firebase-auth.js";` permite criar novos 'user', 'logar' os já existentes e manipular o estado de 'logado' e 'deslogado';
+
+  >>> 'getAuth' precisa ser inicializado, como 'getFirestore(app)', usando a configuração inicial( const app_Ref = initializeApp(firebaseConfig)): 'const auth_Ref = getAuth(app_Ref);
+
+  >>> Os métodos que srão importados são: 'createUserWithEmailAndPassword','signInWithEmailAndPassword' e 'onAuthStateChanged', cria um novo usuário, logar usando e-mail e senha e verifica se tem alguém logado ou não;
+  
+  
+  */
+
 
 
   // XXXXXXXXXXXXXXXXXXX POP_UP XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

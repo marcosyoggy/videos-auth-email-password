@@ -1,5 +1,5 @@
 .main_Body {
-    /* display: flex; */
+    display: flex;
     background-color: gray;
     max-width: 90%;
     height: 500px;
@@ -36,8 +36,17 @@
     margin: auto;
 }
 
-/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+input {
+    padding: 2px;
+    margin: 4px;
+}
 
+h4 {
+    margin-top: 30px;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* 
 .div-01, .div-02, .div-03, .div-04 {
     border: 1px solid white;
     margin: 4px;
@@ -55,6 +64,8 @@
     border: 4px dotted white;
     padding: 15px;
     margin-top: 10px;
+    height: 200px;
+
 }
 
 .inline_El> * {
@@ -62,3 +73,9 @@
     padding: 2px;
     margin-right: 2px;
 }
+
+label {
+   display: inline-flex;
+    color: green;
+
+} */
